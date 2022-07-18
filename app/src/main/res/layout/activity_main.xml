@@ -12,30 +12,48 @@
 
     <TextView
         android:id="@+id/name_text"
+        style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name"
-        android:textAlignment="center"
-        style="@style/NameStyle" />
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/star_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ScrollView
         android:id="@+id/bio_scroll"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/bio_text"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingMultiplier="1.2"
-            android:text="@string/bio" />
+            android:orientation="vertical"
+            android:gravity="start">
+
+
+            <ImageView
+                android:id="@+id/star_image2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <TextView
+                android:id="@+id/bio_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/bio" />
+
+        </LinearLayout>
+
     </ScrollView>
+
 
 </LinearLayout>
